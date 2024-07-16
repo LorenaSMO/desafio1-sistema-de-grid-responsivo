@@ -1,0 +1,55 @@
+/*Importando separadamente os arquivos Sass*/
+@import './_variaveis.scss';
+
+
+/*Aplicando para todos*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/*Estilizando o grid container*/
+.container {
+    padding: 10px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*fr = unidade fracional, neste caso 4 partes de 100*/
+    background-color: $corFundo;
+    
+}
+
+/*Estilizando o grid-item coluna*/
+.coluna {
+    color: white;
+    padding: 20px;
+    border: 2px solid $cor;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $cor; 
+}
+
+/*Tornando responsivo*/
+
+@media (max-width: 1200px) {
+    .container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 800px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 400px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+
+
+
+
+
